@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="ทดสอบความรู้เรื่อง CPR - แบบทดสอบออนไลน์">
+    <title>ทดสอบความรู้ | CPR Education</title>
+
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="../index.html" class="logo">
+                <span class="logo-icon">🫀</span>
+                <span>CPR Education</span>
+            </a>
+
+            <button class="menu-toggle" id="menuToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="../index.html" class="nav-link">หน้าหลัก</a></li>
+                <li><a href="what-is-cpr.html" class="nav-link">CPR คืออะไร</a></li>
+                <li><a href="steps.html" class="nav-link">ขั้นตอน CPR</a></li>
+                <li><a href="who-needs-cpr.html" class="nav-link">CPR สำหรับใคร</a></li>
+                <li><a href="dos-donts.html" class="nav-link">ควร/ไม่ควร</a></li>
+                <li><a href="resources.html" class="nav-link">สื่อการเรียนรู้</a></li>
+                <li><a href="quiz.html" class="nav-link active">ทดสอบความรู้</a></li>
+                <li><a href="about.html" class="nav-link">เกี่ยวกับ</a></li>
+                <li><a href="#" class="nav-link nav-emergency-btn" id="emergencyBtn">⚠️ ฉุกเฉิน</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <section class="section"
+        style="background: linear-gradient(135deg, var(--color-medical-blue) 0%, var(--color-medical-blue-light) 100%); color: white; padding: var(--spacing-2xl) 0;">
+        <div class="container text-center">
+            <h1 class="hero-title" style="margin: 0;">ทดสอบความรู้เรื่อง CPR</h1>
+            <p class="hero-subtitle" style="margin: var(--spacing-md) 0 0 0;">
+                ตอบคำถาม 10 ข้อ เพื่อทดสอบความเข้าใจของคุณ
+            </p>
+        </div>
+    </section>
+
+    <!-- Quiz Section -->
+    <section class="section">
+        <div class="container">
+            <div class="quiz-container" id="quizContainer">
+                <!-- Progress Bar -->
+                <div class="quiz-progress">
+                    <div class="quiz-progress-bar" id="progressBar"></div>
+                </div>
+
+                <div id="quizQuestion">
+                    <p style="text-align: center; color: var(--color-gray-600);">
+                        <i class="fas fa-spinner fa-spin" style="font-size: 2rem;"></i><br>
+                        กำลังโหลดคำถาม...
+                    </p>
+                </div>
+            </div>
+
+            <!-- Results Section (Hidden initially) -->
+            <div class="quiz-container hidden" id="resultsContainer">
+                <div style="text-align: center;">
+                    <div id="scoreIcon" style="font-size: 5rem; margin-bottom: var(--spacing-lg);"></div>
+                    <h2 id="scoreTitle" style="margin-bottom: var(--spacing-md);"></h2>
+                    <p id="scoreText" style="font-size: 1.25rem; margin-bottom: var(--spacing-xl);"></p>
+
+                    <div class="card"
+                        style="background: var(--color-gray-50); text-align: left; margin-bottom: var(--spacing-xl);">
+                        <h3 style="margin-bottom: var(--spacing-md);">📊 สรุปผล</h3>
+                        <div
+                            style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: var(--spacing-md);">
+                            <div>
+                                <p style="color: var(--color-gray-600); margin-bottom: var(--spacing-xs);">คะแนนที่ได้
+                                </p>
+                                <p style="font-size: 2rem; font-weight: 800; color: var(--color-medical-blue); margin: 0;"
+                                    id="finalScore">0</p>
+                            </div>
+                            <div>
+                                <p style="color: var(--color-gray-600); margin-bottom: var(--spacing-xs);">ตอบถูก</p>
+                                <p style="font-size: 2rem; font-weight: 800; color: var(--color-success-green); margin: 0;"
+                                    id="correctCount">0</p>
+                            </div>
+                            <div>
+                                <p style="color: var(--color-gray-600); margin-bottom: var(--spacing-xs);">ตอบผิด</p>
+                                <p style="font-size: 2rem; font-weight: 800; color: var(--color-emergency-red); margin: 0;"
+                                    id="incorrectCount">0</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="recommendation" class="card" style="margin-bottom: var(--spacing-xl);"></div>
+
+                    <div style="display: flex; gap: var(--spacing-md); justify-content: center; flex-wrap: wrap;">
+                        <button class="btn btn-primary" onclick="restartQuiz()">
+                            <i class="fas fa-redo btn-icon"></i>
+                            ทำแบบทดสอบอีกครั้ง
+                        </button>
+                        <a href="steps.html" class="btn btn-outline">
+                            <i class="fas fa-book-open btn-icon"></i>
+                            ทบทวนบทเรียน
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Emergency Mode Modal -->
+    <div id="emergency-mode">
+        <div class="emergency-header">
+            <h1 class="emergency-title">⚠️ โหมดฉุกเฉิน</h1>
+        </div>
+
+        <p class="emergency-step" id="emergencyStep">
+            กดหน้าอกลึก 5-6 ซม.<br>
+            ตามจังหวะเสียง 100-120 ครั้ง/นาที
+        </p>
+
+        <div class="beat-indicator" id="beatIndicator"></div>
+
+        <div class="compression-count">
+            <span id="compressionCount">0</span>/30
+        </div>
+
+        <div class="emergency-controls">
+            <a href="tel:1669" class="btn btn-large btn-emergency-call">
+                <i class="fas fa-phone btn-icon"></i>
+                โทร 1669
+            </a>
+            <button class="btn btn-large btn-emergency-close" id="closeEmergency">
+                <i class="fas fa-times btn-icon"></i>
+                ปิดโหมดฉุกเฉิน
+            </button>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="../index.html" class="footer-link">หน้าหลัก</a>
+                <a href="what-is-cpr.html" class="footer-link">CPR คืออะไร</a>
+                <a href="steps.html" class="footer-link">ขั้นตอน</a>
+                <a href="resources.html" class="footer-link">สื่อการเรียนรู้</a>
+                <a href="about.html" class="footer-link">เกี่ยวกับ</a>
+            </div>
+
+            <div class="footer-disclaimer">
+                <p>
+                    <strong>⚠️ ข้อจำกัดความรับผิดชอบ:</strong><br>
+                    เว็บไซต์นี้จัดทำขึ้นเพื่อให้ความรู้เบื้องต้นเกี่ยวกับการทำ CPR
+                    ไม่สามารถทดแทนการอบรมจากผู้เชี่ยวชาญได้
+                </p>
+            </div>
+
+            <p class="footer-text mt-lg">
+                © 2026 CPR Education Thailand | ข้อมูลอ้างอิงจาก WHO, สภากาชาดไทย, สถาบันการแพทย์ฉุกเฉินแห่งชาติ
+            </p>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+    <script>
+        // Quiz Questions
+        const quizData = [
+            {
+                question: "CPR ย่อมาจากอะไร?",
+                options: [
+                    "Cardiopulmonary Resuscitation",
+                    "Cardiac Pressure Recovery",
+                    "Chest Pump Respiration",
+                    "Circulation Pressure Restore"
+                ],
+                correct: 0,
+                explanation: "CPR ย่อมาจาก Cardiopulmonary Resuscitation ซึ่งแปลว่า การช่วยฟื้นคืนหัวใจและปอด"
+            },
+            {
+                question: "ควรเริ่มทำ CPR เมื่อไหร่?",
+                options: [
+                    "เมื่อผู้ป่วยมีไข้สูง",
+                    "เมื่อผู้ป่วยหมดสติและไม่หายใจปกติ",
+                    "เมื่อผู้ป่วยปวดหัว",
+                    "เมื่อผู้ป่วยบาดเจ็บ"
+                ],
+                correct: 1,
+                explanation: "ควรเริ่มทำ CPR เมื่อผู้ป่วยหมดสติ ไม่ตอบสนอง และไม่มีการหายใจปกติ"
+            },
+            {
+                question: "ความลึกที่ถูกต้องในการกดหน้าอกสำหรับผู้ใหญ่คือเท่าไร?",
+                options: [
+                    "2-3 เซนติเมตร",
+                    "5-6 เซนติเมตร",
+                    "8-10 เซนติเมตร",
+                    "1-2 เซนติเมตร"
+                ],
+                correct: 1,
+                explanation: "ความลึกที่ถูกต้องคือ 5-6 เซนติเมตร เพื่อให้เลือดไหลเวียนได้อย่างมีประสิทธิภาพ"
+            },
+            {
+                question: "อัตราการกดหน้าอกที่เหมาะสมคือกี่ครั้งต่อนาที?",
+                options: [
+                    "60-80 ครั้ง/นาที",
+                    "80-100 ครั้ง/นาที",
+                    "100-120 ครั้ง/นาที",
+                    "120-140 ครั้ง/นาที"
+                ],
+                correct: 2,
+                explanation: "อัตราที่ถูกต้องคือ 100-120 ครั้งต่อนาที เพื่อรักษาการไหลเวียนของเลือด"
+            },
+            {
+                question: "อัตราส่วนการกดหน้าอกต่อการผายปอดคือ?",
+                options: [
+                    "15:2",
+                    "30:2",
+                    "20:1",
+                    "40:2"
+                ],
+                correct: 1,
+                explanation: "อัตราส่วนที่ถูกต้องคือ 30:2 (กดหน้าอก 30 ครั้ง ผายปอด 2 ครั้ง)"
+            },
+            {
+                question: "เบอร์โทรศัพท์ฉุกเฉินสำหรับกู้ชีพในประเทศไทยคือ?",
+                options: [
+                    "911",
+                    "999",
+                    "1669",
+                    "191"
+                ],
+                correct: 2,
+                explanation: "เบอร์โทรฉุกเฉินสำหรับกู้ชีพในประเทศไทยคือ 1669"
+            },
+            {
+                question: "ถ้าคุณพบคนหมดสติแต่ยังหายใจปกติ คุณควรทำอย่างไร?",
+                options: [
+                    "เริ่มทำ CPR ทันที",
+                    "จัดท่านอนตะแคง (Recovery Position) และโทร 1669",
+                    "เอาน้ำรดหน้า",
+                    "ไม่ต้องทำอะไร"
+                ],
+                correct: 1,
+                explanation: "ถ้าหมดสติแต่ยังหายใจปกติ ให้จัดท่านอนตะแคงและโทรขอความช่วยเหลือ ไม่ต้องทำ CPR"
+            },
+            {
+                question: "CPR สำหรับทารก (น้อยกว่า 1 ปี) ควรใช้อวัยวะใดในการกดหน้าอก?",
+                options: [
+                    "สองมือซ้อนกัน",
+                    "มือข้างเดียว",
+                    "สองนิ้ว (นิ้วชี้และนิ้วกลาง)",
+                    "กำปั้น"
+                ],
+                correct: 2,
+                explanation: "สำหรับทารกใช้ 2 นิ้ว (นิ้วชี้และนิ้วกลาง) ในการกดหน้าอก"
+            },
+            {
+                question: "สมองจะเริ่มได้รับความเสียหายภายในกี่นาทีหลังจากหัวใจหยุดเต้น?",
+                options: [
+                    "1-2 นาที",
+                    "4-6 นาที",
+                    "10-15 นาที",
+                    "30 นาที"
+                ],
+                correct: 1,
+                explanation: "สมองจะเริ่มได้รับความเสียหายภายใน 4-6 นาทีหลังหัวใจหยุดเต้น"
+            },
+            {
+                question: "ข้อใดต่อไปนี้ถูกต้องเกี่ยวกับ 'Hands-Only CPR'?",
+                options: [
+                    "ต้องผายปอดทุกครั้ง",
+                    "กดแค่มือเดียว",
+                    "กดหน้าอกอย่างเดียวโดยไม่ผายปอด",
+                    "ใช้เฉพาะกับเด็ก"
+                ],
+                correct: 2,
+                explanation: "Hands-Only CPR คือการกดหน้าอกอย่างเดียวโดยไม่ผายปอด ใช้ได้กับผู้ใหญ่"
+            }
+        ];
+
+        let currentQuestion = 0;
+        let score = 0;
+        let userAnswers = [];
+
+        // Initialize Quiz
+        function initQuiz() {
+            currentQuestion = 0;
+            score = 0;
+            userAnswers = [];
+            document.getElementById('quizContainer').classList.remove('hidden');
+            document.getElementById('resultsContainer').classList.add('hidden');
+            showQuestion();
+        }
+
+        // Show Question
+        function showQuestion() {
+            const question = quizData[currentQuestion];
+            const progress = ((currentQuestion + 1) / quizData.length) * 100;
+            document.getElementById('progressBar').style.width = progress + '%';
+
+            let html = `
+                <p style="font-size: 0.875rem; color: var(--color-gray-600); margin-bottom: var(--spacing-md);">
+                    คำถามที่ ${currentQuestion + 1}/${quizData.length}
+                </p>
+                <h3 class="quiz-question">${question.question}</h3>
+                <div class="quiz-options">
+            `;
+
+            question.options.forEach((option, index) => {
+                html += `
+                    <div class="quiz-option" onclick="selectAnswer(${index})">
+                        ${option}
+                    </div>
+                `;
+            });
+
+            html += '</div>';
+
+            document.getElementById('quizQuestion').innerHTML = html;
+        }
+
+        // Select Answer
+        function selectAnswer(answerIndex) {
+            const question = quizData[currentQuestion];
+            const options = document.querySelectorAll('.quiz-option');
+
+            // Remove previous selections
+            options.forEach(opt => {
+                opt.classList.remove('selected', 'correct', 'incorrect');
+                opt.style.pointerEvents = 'none';
+            });
+
+            // Mark selected
+            options[answerIndex].classList.add('selected');
+
+            // Check if correct
+            if (answerIndex === question.correct) {
+                options[answerIndex].classList.add('correct');
+                score++;
+                userAnswers.push(true);
+            } else {
+                options[answerIndex].classList.add('incorrect');
+                options[question.correct].classList.add('correct');
+                userAnswers.push(false);
+            }
+
+            // Show explanation
+            setTimeout(() => {
+                let html = document.getElementById('quizQuestion').innerHTML;
+                html += `
+                    <div class="card mt-lg" style="background: var(--color-medical-blue-lighter); border: none;">
+                        <p style="margin: 0; color: var(--color-gray-700);">
+                            <strong>💡 คำอธิบาย:</strong> ${question.explanation}
+                        </p>
+                    </div>
+                    <button class="btn btn-primary mt-lg" onclick="nextQuestion()">
+                        ${currentQuestion < quizData.length - 1 ? 'คำถามถัดไป' : 'ดูผลคะแนน'}
+                        <i class="fas fa-arrow-right btn-icon"></i>
+                    </button>
+                `;
+                document.getElementById('quizQuestion').innerHTML = html;
+            }, 500);
+        }
+
+        // Next Question
+        function nextQuestion() {
+            currentQuestion++;
+            if (currentQuestion < quizData.length) {
+                showQuestion();
+            } else {
+                showResults();
+            }
+        }
+
+        // Show Results
+        function showResults() {
+            document.getElementById('quizContainer').classList.add('hidden');
+            document.getElementById('resultsContainer').classList.remove('hidden');
+
+            const percentage = (score / quizData.length) * 100;
+            const correctCount = score;
+            const incorrectCount = quizData.length - score;
+
+            // Update scores
+            document.getElementById('finalScore').textContent = Math.round(percentage) + '%';
+            document.getElementById('correctCount').textContent = correctCount;
+            document.getElementById('incorrectCount').textContent = incorrectCount;
+
+            // Set icon and title based on score
+            let icon, title, text, recommendation;
+
+            if (percentage >= 90) {
+                icon = '🏆';
+                title = 'ยอดเยี่ยม!';
+                text = `คุณได้ ${correctCount}/${quizData.length} คะแนน - คุณมีความรู้เรื่อง CPR เป็นอย่างดี!`;
+                recommendation = `
+                    <h4 style="color: var(--color-success-green); margin-bottom: var(--spacing-md);">✅ คำแนะนำ</h4>
+                    <p style="margin: 0;">คุณมีความรู้ความเข้าใจเกี่ยวกับ CPR ในระดับดีมาก 
+                    ขอแนะนำให้เข้าร่วมหลักสูตรการฝึกปฏิบัติจริงเพื่อประสบการณ์ที่สมบูรณ์ยิ่งขึ้น</p>
+                `;
+            } else if (percentage >= 70) {
+                icon = '👍';
+                title = 'ดีมาก!';
+                text = `คุณได้ ${correctCount}/${quizData.length} คะแนน - คุณมีความรู้พื้นฐานที่ดี!`;
+                recommendation = `
+                    <h4 style="color: var(--color-medical-blue); margin-bottom: var(--spacing-md);">📚 คำแนะนำ</h4>
+                    <p style="margin: 0;">คุณมีความเข้าใจพื้นฐานที่ดี 
+                    แนะนำให้ทบทวนเนื้อหาที่ตอบผิดและฝึกฝนเพิ่มเติม</p>
+                `;
+            } else {
+                icon = '📖';
+                title = 'ลองอีกครั้ง!';
+                text = `คุณได้ ${correctCount}/${quizData.length} คะแนน - ยังต้องศึกษาเพิ่มเติม`;
+                recommendation = `
+                    <h4 style="color: var(--color-warning-orange); margin-bottom: var(--spacing-md);">⚠️ คำแนะนำ</h4>
+                    <p style="margin: 0;">แนะนำให้ทบทวนเนื้อหาทั้งหมดอีกครั้ง 
+                    โดยเฉพาะหน้าขั้นตอนการทำ CPR และควร/ไม่ควร</p>
+                `;
+            }
+
+            document.getElementById('scoreIcon').textContent = icon;
+            document.getElementById('scoreTitle').textContent = title;
+            document.getElementById('scoreText').textContent = text;
+            document.getElementById('recommendation').innerHTML = recommendation;
+        }
+
+        // Restart Quiz
+        function restartQuiz() {
+            initQuiz();
+        }
+
+        // Start quiz on page load
+        window.addEventListener('DOMContentLoaded', () => {
+            initQuiz();
+        });
+    </script>
+</body>
+
+</html>

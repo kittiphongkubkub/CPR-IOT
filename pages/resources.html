@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="สื่อการเรียนรู้ CPR - วิดีโอ อินโฟกราฟิก และแหล่งข้อมูลเพิ่มเติม">
+    <title>สื่อการเรียนรู้ | CPR Education</title>
+
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="../index.html" class="logo">
+                <span class="logo-icon">🫀</span>
+                <span>CPR Education</span>
+            </a>
+
+            <button class="menu-toggle" id="menuToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="../index.html" class="nav-link">หน้าหลัก</a></li>
+                <li><a href="what-is-cpr.html" class="nav-link">CPR คืออะไร</a></li>
+                <li><a href="steps.html" class="nav-link">ขั้นตอน CPR</a></li>
+                <li><a href="who-needs-cpr.html" class="nav-link">CPR สำหรับใคร</a></li>
+                <li><a href="dos-donts.html" class="nav-link">ควร/ไม่ควร</a></li>
+                <li><a href="resources.html" class="nav-link active">สื่อการเรียนรู้</a></li>
+                <li><a href="quiz.html" class="nav-link">ทดสอบความรู้</a></li>
+                <li><a href="about.html" class="nav-link">เกี่ยวกับ</a></li>
+                <li><a href="#" class="nav-link nav-emergency-btn" id="emergencyBtn">⚠️ ฉุกเฉิน</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <section class="section"
+        style="background: linear-gradient(135deg, var(--color-medical-blue) 0%, var(--color-medical-blue-light) 100%); color: white; padding: var(--spacing-2xl) 0;">
+        <div class="container text-center">
+            <h1 class="hero-title" style="margin: 0;">สื่อการเรียนรู้</h1>
+            <p class="hero-subtitle" style="margin: var(--spacing-md) 0 0 0;">
+                วิดีโอ อินโฟกราฟิก และแหล่งข้อมูลเพิ่มเติม
+            </p>
+        </div>
+    </section>
+
+    <!-- Video Resources -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">🎬 วิดีโอสาธิต</h2>
+                <p class="section-subtitle">
+                    วิดีโอการสาธิตการทำ CPR จากแหล่งที่เชื่อถือได้
+                </p>
+            </div>
+
+            <div class="grid grid-2">
+                <div class="card animate-on-scroll">
+                    <div
+                        style="position: relative; padding-bottom: 56.25%; background: var(--color-gray-200); border-radius: var(--radius-md); margin-bottom: var(--spacing-md);">
+                        <div
+                            style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); text-align: center;">
+                            <i class="fas fa-play-circle"
+                                style="font-size: 4rem; color: var(--color-medical-blue);"></i>
+                            <p style="margin-top: var(--spacing-sm); color: var(--color-gray-600);">วิดีโอจาก WHO</p>
+                        </div>
+                    </div>
+                    <h3>การทำ CPR สำหรับผู้ใหญ่</h3>
+                    <p class="card-text">คำแนะนำจากองค์การอนามัยโลก (WHO)</p>
+                    <a href="https://www.youtube.com/results?search_query=WHO+CPR+adult+tutorial" target="_blank"
+                        class="btn btn-outline mt-md">
+                        <i class="fab fa-youtube btn-icon"></i>
+                        ดูบน YouTube
+                    </a>
+                </div>
+
+                <div class="card animate-on-scroll">
+                    <div
+                        style="position: relative; padding-bottom: 56.25%; background: var(--color-gray-200); border-radius: var(--radius-md); margin-bottom: var(--spacing-md);">
+                        <div
+                            style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); text-align: center;">
+                            <i class="fas fa-play-circle"
+                                style="font-size: 4rem; color: var(--color-emergency-red);"></i>
+                            <p style="margin-top: var(--spacing-sm); color: var(--color-gray-600);">วิดีโอจากสภากาชาด
+                            </p>
+                        </div>
+                    </div>
+                    <h3>Hands-Only CPR</h3>
+                    <p class="card-text">เรียนรู้การกดหน้าอกอย่างเดียว</p>
+                    <a href="https://www.youtube.com/results?search_query=hands+only+CPR+tutorial+thai" target="_blank"
+                        class="btn btn-outline mt-md">
+                        <i class="fab fa-youtube btn-icon"></i>
+                        ดูบน YouTube
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Infographics -->
+    <section class="section" style="background: var(--color-gray-50);">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">📊 อินโฟกราฟิก</h2>
+                <p class="section-subtitle">
+                    ข้อมูลสำคัญเกี่ยวกับ CPR ในรูปแบบภาพ
+                </p>
+            </div>
+
+            <div class="grid grid-3">
+                <div class="card text-center animate-on-scroll">
+                    <div style="font-size: 4rem; margin-bottom: var(--spacing-md);">📋</div>
+                    <h3>ขั้นตอนย่อ CPR</h3>
+                    <p class="card-text">อินโฟกราฟิกสรุปขั้นตอนแบบย่อ</p>
+                    <a href="steps.html" class="btn btn-outline mt-md">
+                        <i class="fas fa-arrow-right btn-icon"></i>
+                        ดูขั้นตอน
+                    </a>
+                </div>
+
+                <div class="card text-center animate-on-scroll">
+                    <div style="font-size: 4rem; margin-bottom: var(--spacing-md);">👥</div>
+                    <h3>CPR แต่ละกลุ่ม</h3>
+                    <p class="card-text">ความแตกต่างในแต่ละช่วงอายุ</p>
+                    <a href="who-needs-cpr.html" class="btn btn-outline mt-md">
+                        <i class="fas fa-arrow-right btn-icon"></i>
+                        ดูรายละเอียด
+                    </a>
+                </div>
+
+                <div class="card text-center animate-on-scroll">
+                    <div style="font-size: 4rem; margin-bottom: var(--spacing-md);">✅❌</div>
+                    <h3>ควร/ไม่ควร</h3>
+                    <p class="card-text">ข้อควรปฏิบัติที่สำคัญ</p>
+                    <a href="dos-donts.html" class="btn btn-outline mt-md">
+                        <i class="fas fa-arrow-right btn-icon"></i>
+                        ดูรายละเอียด
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- External Resources -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">🔗 แหล่งข้อมูลเพิ่มเติม</h2>
+                <p class="section-subtitle">
+                    ลิงก์ไปยังองค์กรและหน่วยงานที่เชื่อถือได้
+                </p>
+            </div>
+
+            <div class="grid grid-2">
+                <div class="card animate-on-scroll" style="border-top: 4px solid var(--color-emergency-red);">
+                    <div style="font-size: 3rem; margin-bottom: var(--spacing-md);">🏥</div>
+                    <h3>สถาบันการแพทย์ฉุกเฉินแห่งชาติ (สพฉ.)</h3>
+                    <p class="card-text">
+                        หน่วยงานภายใต้กระทรวงสาธารณสุข รับผิดชอบระบบการแพทย์ฉุกเฉิน
+                    </p>
+                    <a href="https://www.niems.go.th/" target="_blank" class="btn btn-outline mt-md">
+                        <i class="fas fa-external-link-alt btn-icon"></i>
+                        เยี่ยมชมเว็บไซต์
+                    </a>
+                </div>
+
+                <div class="card animate-on-scroll" style="border-top: 4px solid var(--color-emergency-red);">
+                    <div style="font-size: 3rem; margin-bottom: var(--spacing-md);">🏥</div>
+                    <h3>สภากาชาดไทย</h3>
+                    <p class="card-text">
+                        จัดหลักสูตรการปฐมพยาบาลและ CPR สำหรับประชาชน
+                    </p>
+                    <a href="https://www.redcross.or.th/" target="_blank" class="btn btn-outline mt-md">
+                        <i class="fas fa-external-link-alt btn-icon"></i>
+                        เยี่ยมชมเว็บไซต์
+                    </a>
+                </div>
+
+                <div class="card animate-on-scroll" style="border-top: 4px solid var(--color-medical-blue);">
+                    <div style="font-size: 3rem; margin-bottom: var(--spacing-md);">🌍</div>
+                    <h3>World Health Organization (WHO)</h3>
+                    <p class="card-text">
+                        แหล่งข้อมูลระดับสากลเกี่ยวกับสุขภาพและการกู้ชีพ
+                    </p>
+                    <a href="https://www.who.int/" target="_blank" class="btn btn-outline mt-md">
+                        <i class="fas fa-external-link-alt btn-icon"></i>
+                        เยี่ยมชมเว็บไซต์
+                    </a>
+                </div>
+
+                <div class="card animate-on-scroll" style="border-top: 4px solid var(--color-medical-blue);">
+                    <div style="font-size: 3rem; margin-bottom: var(--spacing-md);">❤️</div>
+                    <h3>American Heart Association</h3>
+                    <p class="card-text">
+                        องค์กรชั้นนำด้านการดูแลหัวใจและ CPR
+                    </p>
+                    <a href="https://www.heart.org/" target="_blank" class="btn btn-outline mt-md">
+                        <i class="fas fa-external-link-alt btn-icon"></i>
+                        เยี่ยมชมเว็บไซต์
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Training Courses -->
+    <section class="section" style="background: var(--color-gray-50);">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">🎓 หลักสูตรฝึกอบรม</h2>
+                <p class="section-subtitle">
+                    เรียนรู้และฝึกปฏิบัติจากผู้เชี่ยวชาญ
+                </p>
+            </div>
+
+            <div class="steps-container" style="max-width: 900px;">
+                <div class="step animate-on-scroll" style="border-left-color: var(--color-success-green);">
+                    <div class="step-number" style="background: var(--color-success-green);">1</div>
+                    <div class="step-content">
+                        <h3 class="step-title">หลักสูตรปฐมพยาบาลเบื้องต้น</h3>
+                        <p class="step-description">
+                            จัดโดยสภากาชาดไทย เรียนรู้ CPR และเทคนิคปฐมพยาบาลเบื้องต้น
+                            ระยะเวลา 1-2 วัน ได้ใบรับรอง
+                        </p>
+                        <a href="https://www.redcross.or.th/" target="_blank" class="btn btn-outline mt-md">
+                            <i class="fas fa-info-circle btn-icon"></i>
+                            สอบถามข้อมูล
+                        </a>
+                    </div>
+                </div>
+
+                <div class="step animate-on-scroll" style="border-left-color: var(--color-success-green);">
+                    <div class="step-number" style="background: var(--color-success-green);">2</div>
+                    <div class="step-content">
+                        <h3 class="step-title">BLS (Basic Life Support)</h3>
+                        <p class="step-description">
+                            หลักสูตรสำหรับบุคลากรทางการแพทย์และผู้สนใจ เน้นเทคนิคขั้นสูง
+                            ได้ใบรับรองมาตรฐานสากล
+                        </p>
+                        <p style="color: var(--color-gray-600); margin-top: var(--spacing-md);">
+                            <strong>💡 เคล็ดลับ:</strong>
+                            ติดต่อโรงพยาบาลหรือสถาบันฝึกอบรมที่ได้รับการรับรองในพื้นที่ของคุณ
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Download Resources -->
+    <section class="section">
+        <div class="container text-center">
+            <h2 class="section-title">📥 ดาวน์โหลดเอกสาร</h2>
+            <p class="section-subtitle mb-xl">
+                เอกสารสรุปที่สามารถพิมพ์ออกมาใช้งานได้
+            </p>
+
+            <div class="grid grid-3" style="max-width: 900px; margin: 0 auto;">
+                <div class="card text-center">
+                    <div style="font-size: 4rem; margin-bottom: var(--spacing-md); color: var(--color-emergency-red);">
+                        <i class="fas fa-file-pdf"></i>
+                    </div>
+                    <h3>คู่มือ CPR ย่อ</h3>
+                    <p class="card-text">สรุปขั้นตอนสำคัญไว้ 1 หน้า</p>
+                    <button class="btn btn-outline mt-md" onclick="window.print()">
+                        <i class="fas fa-print btn-icon"></i>
+                        พิมพ์หน้านี้
+                    </button>
+                </div>
+
+                <div class="card text-center">
+                    <div style="font-size: 4rem; margin-bottom: var(--spacing-md); color: var(--color-medical-blue);">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3>บันทึกเว็บไซต์</h3>
+                    <p class="card-text">บันทึกเพื่อเข้าถึงได้แบบ Offline</p>
+                    <button class="btn btn-outline mt-md"
+                        onclick="alert('กด Ctrl+D (Windows) หรือ Cmd+D (Mac) เพื่อบุ๊กมาร์ก')">
+                        <i class="fas fa-bookmark btn-icon"></i>
+                        วิธีบันทึก
+                    </button>
+                </div>
+
+                <div class="card text-center">
+                    <div style="font-size: 4rem; margin-bottom: var(--spacing-md); color: var(--color-success-green);">
+                        <i class="fas fa-share-alt"></i>
+                    </div>
+                    <h3>แชร์ความรู้</h3>
+                    <p class="card-text">แชร์เว็บไซต์ให้เพื่อน ๆ</p>
+                    <button class="btn btn-outline mt-md" onclick="sharePage()">
+                        <i class="fas fa-share btn-icon"></i>
+                        แชร์เลย
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Emergency Mode Modal -->
+    <div id="emergency-mode">
+        <div class="emergency-header">
+            <h1 class="emergency-title">⚠️ โหมดฉุกเฉิน</h1>
+        </div>
+
+        <p class="emergency-step" id="emergencyStep">
+            กดหน้าอกลึก 5-6 ซม.<br>
+            ตามจังหวะเสียง 100-120 ครั้ง/นาที
+        </p>
+
+        <div class="beat-indicator" id="beatIndicator"></div>
+
+        <div class="compression-count">
+            <span id="compressionCount">0</span>/30
+        </div>
+
+        <div class="emergency-controls">
+            <a href="tel:1669" class="btn btn-large btn-emergency-call">
+                <i class="fas fa-phone btn-icon"></i>
+                โทร 1669
+            </a>
+            <button class="btn btn-large btn-emergency-close" id="closeEmergency">
+                <i class="fas fa-times btn-icon"></i>
+                ปิดโหมดฉุกเฉิน
+            </button>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="../index.html" class="footer-link">หน้าหลัก</a>
+                <a href="what-is-cpr.html" class="footer-link">CPR คืออะไร</a>
+                <a href="steps.html" class="footer-link">ขั้นตอน</a>
+                <a href="resources.html" class="footer-link">สื่อการเรียนรู้</a>
+                <a href="about.html" class="footer-link">เกี่ยวกับ</a>
+            </div>
+
+            <div class="footer-disclaimer">
+                <p>
+                    <strong>⚠️ ข้อจำกัดความรับผิดชอบ:</strong><br>
+                    เว็บไซต์นี้จัดทำขึ้นเพื่อให้ความรู้เบื้องต้นเกี่ยวกับการทำ CPR
+                    ไม่สามารถทดแทนการอบรมจากผู้เชี่ยวชาญได้
+                </p>
+            </div>
+
+            <p class="footer-text mt-lg">
+                © 2026 CPR Education Thailand | ข้อมูลอ้างอิงจาก WHO, สภากาชาดไทย, สถาบันการแพทย์ฉุกเฉินแห่งชาติ
+            </p>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+
+</html>

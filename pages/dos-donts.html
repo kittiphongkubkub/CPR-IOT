@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="สิ่งที่ควรทำและไม่ควรทำเมื่อทำ CPR">
+    <title>ควร/ไม่ควรทำ | CPR Education</title>
+
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="../index.html" class="logo">
+                <span class="logo-icon">🫀</span>
+                <span>CPR Education</span>
+            </a>
+
+            <button class="menu-toggle" id="menuToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="../index.html" class="nav-link">หน้าหลัก</a></li>
+                <li><a href="what-is-cpr.html" class="nav-link">CPR คืออะไร</a></li>
+                <li><a href="steps.html" class="nav-link">ขั้นตอน CPR</a></li>
+                <li><a href="who-needs-cpr.html" class="nav-link">CPR สำหรับใคร</a></li>
+                <li><a href="dos-donts.html" class="nav-link active">ควร/ไม่ควร</a></li>
+                <li><a href="resources.html" class="nav-link">สื่อการเรียนรู้</a></li>
+                <li><a href="quiz.html" class="nav-link">ทดสอบความรู้</a></li>
+                <li><a href="about.html" class="nav-link">เกี่ยวกับ</a></li>
+                <li><a href="#" class="nav-link nav-emergency-btn" id="emergencyBtn">⚠️ ฉุกเฉิน</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <section class="section"
+        style="background: linear-gradient(135deg, var(--color-success-green) 0%, var(--color-emergency-red) 100%); color: white; padding: var(--spacing-2xl) 0;">
+        <div class="container text-center">
+            <h1 class="hero-title" style="margin: 0;">สิ่งที่ควรทำ และ ไม่ควรทำ</h1>
+            <p class="hero-subtitle" style="margin: var(--spacing-md) 0 0 0;">
+                แนวทางปฏิบัติที่ถูกต้องเมื่อทำ CPR
+            </p>
+        </div>
+    </section>
+
+    <!-- DO's Section -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title" style="color: var(--color-success-green);">
+                    ✅ สิ่งที่ควรทำ
+                </h2>
+                <p class="section-subtitle">
+                    ปฏิบัติตามข้อแนะนำเหล่านี้เพื่อการช่วยชีวิตที่มีประสิทธิภาพ
+                </p>
+            </div>
+
+            <div class="dos-donts-grid">
+                <div class="do-item animate-on-scroll">
+                    <div class="do-icon">✅</div>
+                    <div>
+                        <h3 style="margin-bottom: var(--spacing-sm);">โทร 1669 ทันที</h3>
+                        <p style="margin: 0; color: var(--color-gray-600);">
+                            โทรขอความช่วยเหลือก่อนเริ่มทำ CPR หรือให้คนอื่นโทรขณะที่คุณเริ่มช่วยเหลือ
+                        </p>
+                    </div>
+                </div>
+
+                <div class="do-item animate-on-scroll">
+                    <div class="do-icon">✅</div>
+                    <div>
+                        <h3 style="margin-bottom: var(--spacing-sm);">กดต่อเนื่องจนมีความช่วยเหลือมา</h3>
+                        <p style="margin: 0; color: var(--color-gray-600);">
+                            อย่าหยุดการกดหน้าอกจนกว่าทีมกู้ชีพจะมาถึง หรือผู้ป่วยเริ่มมีการตอบสนอง
+                        </p>
+                    </div>
+                </div>
+
+                <div class="do-item animate-on-scroll">
+                    <div class="do-icon">✅</div>
+                    <div>
+                        <h3 style="margin-bottom: var(--spacing-sm);">กดหน้าอกให้แน่นและลึก</h3>
+                        <p style="margin: 0; color: var(--color-gray-600);">
+                            กดลึก 5-6 ซม. เพื่อให้เลือดไหลเวียนได้อย่างมีประสิทธิภาพ
+                        </p>
+                    </div>
+                </div>
+
+                <div class="do-item animate-on-scroll">
+                    <div class="do-icon">✅</div>
+                    <div>
+                        <h3 style="margin-bottom: var(--spacing-sm);">รักษาอัตรา 100-120 ครั้ง/นาที</h3>
+                        <p style="margin: 0; color: var(--color-gray-600);">
+                            กดหน้าอกด้วยจังหวะที่สม่ำเสมอ ไม่เร็วหรือช้าเกินไป
+                        </p>
+                    </div>
+                </div>
+
+                <div class="do-item animate-on-scroll">
+                    <div class="do-icon">✅</div>
+                    <div>
+                        <h3 style="margin-bottom: var(--spacing-sm);">ปล่อยให้หน้าอกกลับเต็มที่</h3>
+                        <p style="margin: 0; color: var(--color-gray-600);">
+                            หลังจากกดทุกครั้ง ต้องปล่อยให้หน้าอกกลับสู่สภาพเดิมเต็มที่
+                        </p>
+                    </div>
+                </div>
+
+                <div class="do-item animate-on-scroll">
+                    <div class="do-icon">✅</div>
+                    <div>
+                        <h3 style="margin-bottom: var(--spacing-sm);">ตรวจสอบความปลอดภัยก่อน</h3>
+                        <p style="margin: 0; color: var(--color-gray-600);">
+                            ตรวจสอบว่าพื้นที่ปลอดภัยสำหรับคุณและผู้ป่วยก่อนเริ่มช่วยเหลือ
+                        </p>
+                    </div>
+                </div>
+
+                <div class="do-item animate-on-scroll">
+                    <div class="do-icon">✅</div>
+                    <div>
+                        <h3 style="margin-bottom: var(--spacing-sm);">ขอ AED ถ้ามี</h3>
+                        <p style="margin: 0; color: var(--color-gray-600);">
+                            เครื่อง AED สามารถเพิ่มโอกาสรอดชีวิตได้มาก ให้คนอื่นช่วยหามา
+                        </p>
+                    </div>
+                </div>
+
+                <div class="do-item animate-on-scroll">
+                    <div class="do-icon">✅</div>
+                    <div>
+                        <h3 style="margin-bottom: var(--spacing-sm);">สลับกันกดถ้ามีคนช่วยหลายคน</h3>
+                        <p style="margin: 0; color: var(--color-gray-600);">
+                            สลับกันกดทุก 2 นาที เพื่อรักษาคุณภาพการกดและลดความเหนื่อยล้า
+                        </p>
+                    </div>
+                </div>
+
+                <div class="do-item animate-on-scroll">
+                    <div class="do-icon">✅</div>
+                    <div>
+                        <h3 style="margin-bottom: var(--spacing-sm);">วางผู้ป่วยบนพื้นแข็ง</h3>
+                        <p style="margin: 0; color: var(--color-gray-600);">
+                            ย้ายผู้ป่วยไปยังพื้นแข็งและเรียบ CPR บนเตียงหรือพื้นนุ่มไม่มีประสิทธิภาพ
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- DON'Ts Section -->
+    <section class="section" style="background: var(--color-gray-50);">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title" style="color: var(--color-emergency-red);">
+                    ❌ สิ่งที่ไม่ควรทำ
+                </h2>
+                <p class="section-subtitle">
+                    หลีกเลี่ยงสิ่งเหล่านี้เพื่อความปลอดภัยและประสิทธิภาพ
+                </p>
+            </div>
+
+            <div class="dos-donts-grid">
+                <div class="dont-item animate-on-scroll">
+                    <div class="dont-icon">❌</div>
+                    <div>
+                        <h3 style="margin-bottom: var(--spacing-sm);">ห้ามใช้แรงน้อยเกินไป</h3>
+                        <p style="margin: 0; color: var(--color-gray-600);">
+                            การกดเบาไม่เพียงพอที่จะช่วยสูบฉีดเลือด ต้องกดลึก 5-6 ซม.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="dont-item animate-on-scroll">
+                    <div class="dont-icon">❌</div>
+                    <div>
+                        <h3 style="margin-bottom: var(--spacing-sm);">ห้ามหยุดกดนานเกิน 10 วินาที</h3>
+                        <p style="margin: 0; color: var(--color-gray-600);">
+                            การหยุดกดนานเกินไปจะทำให้เลือดไม่ไหลเวียน ต้องกดต่อเนื่อง
+                        </p>
+                    </div>
+                </div>
+
+                <div class="dont-item animate-on-scroll">
+                    <div class="dont-icon">❌</div>
+                    <div>
+                        <h3 style="margin-bottom: var(--spacing-sm);">ห้ามตระหนกหรือยอมแพ้</h3>
+                        <p style="margin: 0; color: var(--color-gray-600);">
+                            แม้ว่าจะไม่เห็นผลทันที แต่ CPR ยังคงส่งออกซิเจนไปยังสมอง
+                        </p>
+                    </div>
+                </div>
+
+                <div class="dont-item animate-on-scroll">
+                    <div class="dont-icon">❌</div>
+                    <div>
+                        <h3 style="margin-bottom: var(--spacing-sm);">ห้ามกดผิดตำแหน่ง</h3>
+                        <p style="margin: 0; color: var(--color-gray-600);">
+                            กดที่กลางกระดูกหน้าอก ไม่ใช่ท้อง ไม่ใช่คอ หรือข้างลำตัว
+                        </p>
+                    </div>
+                </div>
+
+                <div class="dont-item animate-on-scroll">
+                    <div class="dont-icon">❌</div>
+                    <div>
+                        <h3 style="margin-bottom: var(--spacing-sm);">ห้ามงอแขน</h3>
+                        <p style="margin: 0; color: var(--color-gray-600);">
+                            ใช้น้ำหนักตัวกด ไม่ใช่แขน แขนต้องตรงตลอดเวลา
+                        </p>
+                    </div>
+                </div>
+
+                <div class="dont-item animate-on-scroll">
+                    <div class="dont-icon">❌</div>
+                    <div>
+                        <h3 style="margin-bottom: var(--spacing-sm);">ห้ามเอาน้ำหรือยาเข้าปาก</h3>
+                        <p style="margin: 0; color: var(--color-gray-600);">
+                            ผู้ป่วยหมดสติอาจสำลัก ห้ามให้อะไรทางปากจนกว่าจะรู้สติ
+                        </p>
+                    </div>
+                </div>
+
+                <div class="dont-item animate-on-scroll">
+                    <div class="dont-icon">❌</div>
+                    <div>
+                        <h3 style="margin-bottom: var(--spacing-sm);">ห้ามย้ายผู้ป่วยโดยไม่จำเป็น</h3>
+                        <p style="margin: 0; color: var(--color-gray-600);">
+                            ทำ CPR ตรงที่เจอ เว้นแต่พื้นที่ไม่ปลอดภัย
+                        </p>
+                    </div>
+                </div>
+
+                <div class="dont-item animate-on-scroll">
+                    <div class="dont-icon">❌</div>
+                    <div>
+                        <h3 style="margin-bottom: var(--spacing-sm);">ห้ามปล่อยมือออกจากหน้าอก</h3>
+                        <p style="margin: 0; color: var(--color-gray-600);">
+                            มือต้องแนบกับหน้าอกตลอด ปล่อยแค่แรงกดเท่านั้น
+                        </p>
+                    </div>
+                </div>
+
+                <div class="dont-item animate-on-scroll">
+                    <div class="dont-icon">❌</div>
+                    <div>
+                        <h3 style="margin-bottom: var(--spacing-sm);">ห้ามเสียเวลาตรวจชีพจรนาน</h3>
+                        <p style="margin: 0; color: var(--color-gray-600);">
+                            ถ้าไม่แน่ใจ เริ่มทำ CPR เลย ดีกว่าเสียเวลา
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Common Mistakes -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">⚠️ ข้อผิดพลาดที่พบบ่อย</h2>
+                <p class="section-subtitle">
+                    สิ่งที่ผู้ช่วยเหลือมักทำผิดและวิธีแก้ไข
+                </p>
+            </div>
+
+            <div class="grid grid-2" style="max-width: 1000px; margin: 0 auto;">
+                <div class="card animate-on-scroll" style="border-top: 4px solid var(--color-emergency-red);">
+                    <h3 style="color: var(--color-emergency-red);">
+                        <i class="fas fa-exclamation-triangle"></i> กดไม่ลึกพอ
+                    </h3>
+                    <p style="color: var(--color-gray-600); margin-bottom: var(--spacing-md);">
+                        <strong>ปัญหา:</strong> กลัวทำร้ายผู้ป่วย จึงกดเบาเกินไป<br>
+                        <strong>แก้ไข:</strong> ต้องกดลึก 5-6 ซม. แม้จะได้ยินเสียงกระดูกก็ตาม ชีวิตสำคัญกว่า
+                    </p>
+                </div>
+
+                <div class="card animate-on-scroll" style="border-top: 4px solid var(--color-emergency-red);">
+                    <h3 style="color: var(--color-emergency-red);">
+                        <i class="fas fa-exclamation-triangle"></i> หยุดกดบ่อยเกินไป
+                    </h3>
+                    <p style="color: var(--color-gray-600); margin-bottom: var(--spacing-md);">
+                        <strong>ปัญหา:</strong> หยุดตรวจดูว่าผู้ป่วยรู้สึกตัวหรือยัง<br>
+                        <strong>แก้ไข:</strong> กดต่อเนื่องจนผู้ป่วยเคลื่อนไหวชัดเจน หรือทีมกู้ชีพมาถึง
+                    </p>
+                </div>
+
+                <div class="card animate-on-scroll" style="border-top: 4px solid var(--color-emergency-red);">
+                    <h3 style="color: var(--color-emergency-red);">
+                        <i class="fas fa-exclamation-triangle"></i> ไม่ปล่อยให้หน้าอกกลับ
+                    </h3>
+                    <p style="color: var(--color-gray-600); margin-bottom: var(--spacing-md);">
+                        <strong>ปัญหา:</strong> ทับหน้าอกทิ้งไว้ ทำให้เลือดไม่ไหลกลับหัวใจ<br>
+                        <strong>แก้ไข:</strong> ปล่อยแรงให้หน้าอกกลับเต็มที่หลังจากกดทุกครั้ง
+                    </p>
+                </div>
+
+                <div class="card animate-on-scroll" style="border-top: 4px solid var(--color-emergency-red);">
+                    <h3 style="color: var(--color-emergency-red);">
+                        <i class="fas fa-exclamation-triangle"></i> กดช้าหรือเร็วเกินไป
+                    </h3>
+                    <p style="color: var(--color-gray-600); margin-bottom: var(--spacing-md);">
+                        <strong>ปัญหา:</strong> จังหวะไม่สม่ำเสมอ<br>
+                        <strong>แก้ไข:</strong> ใช้โหมดฉุกเฉินหรือนับเป็นจังหวะ 100-120 ครั้ง/นาที
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Remember -->
+    <section class="section"
+        style="background: linear-gradient(135deg, var(--color-medical-blue) 0%, var(--color-medical-blue-light) 100%); color: white;">
+        <div class="container text-center">
+            <h2 style="color: white; margin-bottom: var(--spacing-lg);">💪 สิ่งที่สำคัญที่สุด</h2>
+            <div class="card"
+                style="background: white; color: var(--color-gray-900); max-width: 800px; margin: 0 auto;">
+                <h3 style="font-size: 1.5rem; margin-bottom: var(--spacing-md);">
+                    การทำ CPR ที่ไม่สมบูรณ์แบบ<br>
+                    ยังดีกว่าการไม่ทำอะไรเลย
+                </h3>
+                <p style="font-size: 1.125rem; margin: 0; line-height: 1.8;">
+                    อย่ากลัวที่จะทำผิด ชีวิตคนคือสิ่งที่สำคัญที่สุด<br>
+                    แม้แค่การกดหน้าออก (Hands-Only CPR) โดยไม่ผายปอดก็ยังดี<br>
+                    <strong style="color: var(--color-emergency-red);">ทำเลย ไม่ต้องกลัว!</strong>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Emergency Mode Modal -->
+    <div id="emergency-mode">
+        <div class="emergency-header">
+            <h1 class="emergency-title">⚠️ โหมดฉุกเฉิน</h1>
+        </div>
+
+        <p class="emergency-step" id="emergencyStep">
+            กดหน้าอกลึก 5-6 ซม.<br>
+            ตามจังหวะเสียง 100-120 ครั้ง/นาที
+        </p>
+
+        <div class="beat-indicator" id="beatIndicator"></div>
+
+        <div class="compression-count">
+            <span id="compressionCount">0</span>/30
+        </div>
+
+        <div class="emergency-controls">
+            <a href="tel:1669" class="btn btn-large btn-emergency-call">
+                <i class="fas fa-phone btn-icon"></i>
+                โทร 1669
+            </a>
+            <button class="btn btn-large btn-emergency-close" id="closeEmergency">
+                <i class="fas fa-times btn-icon"></i>
+                ปิดโหมดฉุกเฉิน
+            </button>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="../index.html" class="footer-link">หน้าหลัก</a>
+                <a href="what-is-cpr.html" class="footer-link">CPR คืออะไร</a>
+                <a href="steps.html" class="footer-link">ขั้นตอน</a>
+                <a href="resources.html" class="footer-link">สื่อการเรียนรู้</a>
+                <a href="about.html" class="footer-link">เกี่ยวกับ</a>
+            </div>
+
+            <div class="footer-disclaimer">
+                <p>
+                    <strong>⚠️ ข้อจำกัดความรับผิดชอบ:</strong><br>
+                    เว็บไซต์นี้จัดทำขึ้นเพื่อให้ความรู้เบื้องต้นเกี่ยวกับการทำ CPR
+                    ไม่สามารถทดแทนการอบรมจากผู้เชี่ยวชาญได้
+                </p>
+            </div>
+
+            <p class="footer-text mt-lg">
+                © 2026 CPR Education Thailand | ข้อมูลอ้างอิงจาก WHO, สภากาชาดไทย, สถาบันการแพทย์ฉุกเฉินแห่งชาติ
+            </p>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+
+</html>

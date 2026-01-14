@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="เรียนรู้ CPR ความรู้เล็ก ๆ ที่ช่วยชีวิตคนได้ - คู่มือการทำ CPR ที่ถูกต้องภาษาไทย พร้อมคำแนะนำทีละขั้นตอนและโหมดฉุกเฉิน">
+    <meta name="keywords" content="CPR, การช่วยชีวิต, การกู้ชีพ, การกดหน้าอก, 1669">
+    <meta property="og:title" content="CPR - ความรู้เล็ก ๆ ที่ช่วยชีวิตคนได้">
+    <meta property="og:description" content="เรียนรู้วิธีทำ CPR ที่ถูกต้อง พร้อมคำแนะนำทีละขั้นตอนและโหมดฉุกเฉิน">
+    <meta property="og:type" content="website">
+    
+    <title>CPR - ความรู้เล็ก ๆ ที่ช่วยชีวิตคนได้</title>
+    
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <span class="logo-icon">🫀</span>
+                <span>CPR Education</span>
+            </a>
+            
+            <button class="menu-toggle" id="menuToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+            
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html" class="nav-link active">หน้าหลัก</a></li>
+                <li><a href="pages/what-is-cpr.html" class="nav-link">CPR คืออะไร</a></li>
+                <li><a href="pages/steps.html" class="nav-link">ขั้นตอน CPR</a></li>
+                <li><a href="pages/who-needs-cpr.html" class="nav-link">CPR สำหรับใคร</a></li>
+                <li><a href="pages/dos-donts.html" class="nav-link">ควร/ไม่ควร</a></li>
+                <li><a href="pages/resources.html" class="nav-link">สื่อการเรียนรู้</a></li>
+                <li><a href="pages/quiz.html" class="nav-link">ทดสอบความรู้</a></li>
+                <li><a href="pages/about.html" class="nav-link">เกี่ยวกับ</a></li>
+                <li><a href="#" class="nav-link nav-emergency-btn" id="emergencyBtn">⚠️ ฉุกเฉิน</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">🫀 CPR ความรู้เล็ก ๆ ที่ช่วยชีวิตคนได้</h1>
+                <p class="hero-subtitle">
+                    เรียนรู้วิธีทำ CPR ที่ถูกต้อง เพื่อเพิ่มโอกาสรอดชีวิตในสถานการณ์ฉุกเฉิน
+                </p>
+                
+                <div class="hero-buttons">
+                    <a href="pages/steps.html" class="btn btn-primary btn-large">
+                        <i class="fas fa-heart-pulse btn-icon"></i>
+                        เริ่มเรียนรู้ CPR
+                    </a>
+                    <a href="pages/emergency.html" class="btn btn-secondary btn-large">
+                        <i class="fas fa-exclamation-triangle btn-icon"></i>
+                        ต้องทำยังไงเมื่อมีคนหมดสติ
+                    </a>
+                </div>
+                
+                <div class="hero-stat">
+                    <p style="font-size: 1.25rem; margin: 0;">
+                        <strong>📊 CPR ที่ถูกต้องเพิ่มโอกาสรอดถึง 2-3 เท่า</strong>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Learn CPR Section -->
+    <section class="section" style="background: var(--color-gray-50);">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">ทำไมต้องเรียน CPR?</h2>
+                <p class="section-subtitle">
+                    การทำ CPR ที่รวดเร็วและถูกต้องสามารถช่วยชีวิตคนที่คุณรักได้
+                </p>
+            </div>
+            
+            <div class="grid grid-3">
+                <div class="card animate-on-scroll">
+                    <div class="card-icon">⏱️</div>
+                    <h3 class="card-title">เวลาคือชีวิต</h3>
+                    <p class="card-text">
+                        สมองจะเริ่มได้รับความเสียหายภายใน 4-6 นาทีหลังจากหัวใจหยุดเต้น
+                    </p>
+                </div>
+                
+                <div class="card animate-on-scroll">
+                    <div class="card-icon">💪</div>
+                    <h3 class="card-title">ทุกคนทำได้</h3>
+                    <p class="card-text">
+                        ไม่จำเป็นต้องเป็นแพทย์หรือพยาบาล ทุกคนสามารถเรียนรู้ CPR ได้
+                    </p>
+                </div>
+                
+                <div class="card animate-on-scroll">
+                    <div class="card-icon">❤️</div>
+                    <h3 class="card-title">ช่วยชีวิตคนที่รัก</h3>
+                    <p class="card-text">
+                        70% ของผู้ป่วยหัวใจหยุดเต้นเกิดขึ้นที่บ้านหรือในที่สาธารณะ
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quick Guide Section -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">ขั้นตอนหลักของ CPR</h2>
+                <p class="section-subtitle">
+                    5 ขั้นตอนง่าย ๆ ที่คุณควรรู้
+                </p>
+            </div>
+            
+            <div class="steps-container">
+                <div class="step animate-on-scroll">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3 class="step-title">ตรวจสอบความปลอดภัย</h3>
+                        <p class="step-description">
+                            ตรวจสอบว่าพื้นที่รอบ ๆ ปลอดภัยสำหรับคุณและผู้ป่วย
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="step animate-on-scroll">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3 class="step-title">ตรวจการตอบสนอง</h3>
+                        <p class="step-description">
+                            เรียกและเขย่าไหล่เบา ๆ เพื่อดูว่าผู้ป่วยมีการตอบสนองหรือไม่
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="step animate-on-scroll">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3 class="step-title">โทรขอความช่วยเหลือ</h3>
+                        <p class="step-description">
+                            โทร 1669 ทันที และขอเครื่อง AED ถ้ามี
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="step animate-on-scroll">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h3 class="step-title">กดหน้าอก</h3>
+                        <p class="step-description">
+                            กดหน้าอกลึก 5-6 ซม. ด้วยอัตรา 100-120 ครั้งต่อนาที
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="step animate-on-scroll">
+                    <div class="step-number">5</div>
+                    <div class="step-content">
+                        <h3 class="step-title">ผายปอด (ถ้าทำได้)</h3>
+                        <p class="step-description">
+                            ให้ลมหายใจ 2 ครั้งทุก 30 ครั้งของการกดหน้าอก (อัตราส่วน 30:2)
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-xl">
+                <a href="pages/steps.html" class="btn btn-primary btn-large">
+                    <i class="fas fa-book-open btn-icon"></i>
+                    อ่านคำแนะนำแบบละเอียด
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="section" style="background: var(--color-gray-50);">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">ฟีเจอร์เว็บไซต์</h2>
+                <p class="section-subtitle">
+                    เครื่องมือและข้อมูลที่จะช่วยให้คุณเรียนรู้ CPR ได้อย่างมีประสิทธิภาพ
+                </p>
+            </div>
+            
+            <div class="grid grid-4">
+                <div class="card animate-on-scroll">
+                    <div class="card-icon">📚</div>
+                    <h3 class="card-title">คำแนะนำทีละขั้นตอน</h3>
+                    <p class="card-text">
+                        รูปภาพชัดเจนและคำอธิบายละเอียด
+                    </p>
+                </div>
+                
+                <div class="card animate-on-scroll">
+                    <div class="card-icon">⚠️</div>
+                    <h3 class="card-title">โหมดฉุกเฉิน</h3>
+                    <p class="card-text">
+                        คำแนะนำแบบกระชับพร้อมจังหวะเสียง
+                    </p>
+                </div>
+                
+                <div class="card animate-on-scroll">
+                    <div class="card-icon">📝</div>
+                    <h3 class="card-title">แบบทดสอบความรู้</h3>
+                    <p class="card-text">
+                        ทดสอบความเข้าใจของคุณ
+                    </p>
+                </div>
+                
+                <div class="card animate-on-scroll">
+                    <div class="card-icon">🎬</div>
+                    <h3 class="card-title">วิดีโอสาธิต</h3>
+                    <p class="card-text">
+                        ดูการสาธิตการทำ CPR จริง
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="section">
+        <div class="container text-center">
+            <h2 class="section-title">พร้อมที่จะเรียนรู้แล้วหรือยัง?</h2>
+            <p class="section-subtitle mb-xl">
+                เริ่มต้นเรียนรู้วิธีทำ CPR ที่ถูกต้องวันนี้
+            </p>
+            
+            <div class="hero-buttons">
+                <a href="pages/what-is-cpr.html" class="btn btn-outline btn-large">
+                    <i class="fas fa-info-circle btn-icon"></i>
+                    เริ่มต้นที่ CPR คืออะไร
+                </a>
+                <a href="pages/quiz.html" class="btn btn-outline btn-large">
+                    <i class="fas fa-question-circle btn-icon"></i>
+                    ทดสอบความรู้ของคุณ
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Emergency Mode Modal -->
+    <div id="emergency-mode">
+        <div class="emergency-header">
+            <h1 class="emergency-title">⚠️ โหมดฉุกเฉิน</h1>
+        </div>
+        
+        <p class="emergency-step" id="emergencyStep">
+            กดหน้าอกลึก 5-6 ซม.<br>
+            ตามจังหวะเสียง 100-120 ครั้ง/นาที
+        </p>
+        
+        <div class="beat-indicator" id="beatIndicator"></div>
+        
+        <div class="compression-count">
+            <span id="compressionCount">0</span>/30
+        </div>
+        
+        <div class="emergency-controls">
+            <a href="tel:1669" class="btn btn-large btn-emergency-call">
+                <i class="fas fa-phone btn-icon"></i>
+                โทร 1669
+            </a>
+            <button class="btn btn-large btn-emergency-close" id="closeEmergency">
+                <i class="fas fa-times btn-icon"></i>
+                ปิดโหมดฉุกเฉิน
+            </button>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="index.html" class="footer-link">หน้าหลัก</a>
+                <a href="pages/what-is-cpr.html" class="footer-link">CPR คืออะไร</a>
+                <a href="pages/steps.html" class="footer-link">ขั้นตอน</a>
+                <a href="pages/resources.html" class="footer-link">สื่อการเรียนรู้</a>
+                <a href="pages/about.html" class="footer-link">เกี่ยวกับ</a>
+            </div>
+            
+            <div class="footer-disclaimer">
+                <p>
+                    <strong>⚠️ ข้อจำกัดความรับผิดชอบ:</strong><br>
+                    เว็บไซต์นี้จัดทำขึ้นเพื่อให้ความรู้เบื้องต้นเกี่ยวกับการทำ CPR 
+                    ไม่สามารถทดแทนการอบรมจากผู้เชี่ยวชาญได้ 
+                    แนะนำให้เข้าร่วมหลักสูตรการปฐมพยาบาลเบื้องต้นจากหน่วยงานที่เชื่อถือได้
+                </p>
+            </div>
+            
+            <p class="footer-text mt-lg">
+                © 2026 CPR Education Thailand | ข้อมูลอ้างอิงจาก WHO, สภากาชาดไทย, สถาบันการแพทย์ฉุกเฉินแห่งชาติ
+            </p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -6,6 +6,14 @@
 
 ---
 
+## 📸 ตัวอย่างหน้าเว็บ
+
+| หน้าหลัก | ขั้นตอน CPR |
+|:-:|:-:|
+| ![Home](docs/screenshot-home.png) | ![Steps](docs/screenshot-steps.png) |
+
+---
+
 ## ✨ ฟีเจอร์หลัก
 
 | ฟีเจอร์ | รายละเอียด |
